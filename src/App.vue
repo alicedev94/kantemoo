@@ -1,4 +1,5 @@
 <template>
+  {{ x1 }} {{ y1 }} {{ x2 }} {{ y2 }}
   <div>
     <CardCo
       class="card"
@@ -29,6 +30,8 @@ const offsetX = ref(0);
 const offsetY = ref(0);
 
 const updatePosition = (event) => {
+  console.log(event);
+
   if (isDragging.value) {
     if (dragIndex.value === 1) {
       x1.value = event.clientX - offsetX.value;
